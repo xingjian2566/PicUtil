@@ -47,6 +47,7 @@ jobs:
 
         if ! git diff --cached --quiet; then
           git commit -m "自动更新图标仓库"
+          git pull --rebase origin main
           git push origin HEAD:main
         else
           echo "No changes to commit."
